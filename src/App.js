@@ -17,33 +17,59 @@ class App extends Component {
       question: "",
       answerOptions: [],
       explanation: "",
-      results: []
+      results: 0,
+      displayExplanation: true,
+      correct: ""
     };
   }
 
   componentWillMount() {
     this.setState({
       question: QuizQuestions[0].question,
-      answerOptions: QuizQuestions[0].answerOptions
+      answerOptions: QuizQuestions[0].answerOptions,
+      explanation: QuizQuestions[0].explanation
     });
-    console.log(this.state);
   }
 
   onAnswerSelected = e => {
     this.setUserAnswer(e.currentTarget.value);
     if (this.state.questionId < QuizQuestions.length) {
-      console.log("Next question");
+      setTimeout(() => this.setNextQuestion(), 4000);
     } else {
-      console.log(this.state.results);
+      console.log("quiz end");
     }
   };
 
   setUserAnswer = answer => {
+    let results = this.state.results + answer;
+
     if (answer) {
-      console.log("correct");
+      const displayExplanation = true;
+      this.setState({
+        results,
+        displayExplanation,
+        correct: "Correct!"
+      });
     } else {
-      console.log("incorrect");
+      this.setState({
+        displayExplanation: false
+      });
     }
+    console.log(this.state.results);
+  };
+
+  setNextQuestion = () => {
+    const counter = this.state.counter + 1;
+    const questionId = this.state.questionId + 1;
+    this.setState({
+      counter: counter,
+      questionId: questionId,
+      question: QuizQuestions[counter].question,
+      answerOptions: QuizQuestions[counter].answerOptions,
+      explanation: QuizQuestions[counter].explanation,
+      displayExplanation: true,
+      correct: ""
+    });
   };
 
   render() {

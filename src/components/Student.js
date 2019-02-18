@@ -1,6 +1,7 @@
 import React from "react";
 import Question from "./Question";
 import QuestionCount from "./QuestionCount";
+import Answer from "./Answer";
 // import Image from "./Image";
 import QuestionOptions from "./AnswerOptions";
 
@@ -9,6 +10,9 @@ const Student = props => {
   const { questionId } = props;
   const { question } = props;
   const { answerOptions } = props;
+  const { displayExplanation } = props;
+  const { explanation } = props;
+  const { correct } = props;
 
   const localStorageValue = localStorage.getItem("name");
 
@@ -24,16 +28,21 @@ const Student = props => {
           <div className="col-12">
             <Question question={question} />
           </div>
-          <div className="col-4 align-self-center" />
-          <div className="col-4 align-self-center">
+          <div className="col align-self-center" />
+          <div className="col-5 align-self-center">
             <QuestionOptions
               answerOptions={answerOptions}
               onAnswerSelected={props.onAnswerSelected}
             />
           </div>
-          <div className="col-4 align-self-center" />
+          <div className="col align-self-center" />
         </div>
       </div>
+      <Answer
+        displayExplanation={displayExplanation}
+        explanation={explanation}
+        correct={correct}
+      />
     </div>
   );
 };

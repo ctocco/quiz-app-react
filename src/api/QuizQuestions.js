@@ -1,14 +1,16 @@
 let QuizQuestions = [
   {
     questionId: 1,
-    question: "Q1: Everything in React is a ________",
+    question:
+      "Q1: How do you access a function fetch() from a h1 element in JSX?",
     answerOptions: [
-      { id: 1, value: 0, content: "Module" },
-      { id: 2, value: 1, content: "Component" },
-      { id: 3, value: 0, content: "Package" },
-      { id: 4, value: 0, content: "Class" }
+      { id: 1, value: 1, content: "<h1>{fetch()}</h1>" },
+      { id: 2, value: 0, content: "<h1>${fetch()}</h1>" },
+      { id: 3, value: 0, content: "<h1>{fetch}</h1>" },
+      { id: 4, value: 0, content: "<h1>${fetch}</h1>" }
     ],
-    explanation: "The right answer is Component"
+    explanation:
+      "The You can pass a Javascript expression by surrounding it with {} answer is Component"
   },
   {
     questionId: 2,
@@ -16,10 +18,10 @@ let QuizQuestions = [
     answerOptions: [
       { id: 5, value: 0, content: "HTML" },
       { id: 6, value: 0, content: "CSS" },
-      { id: 7, value: 1, content: "Java Script" },
+      { id: 7, value: 1, content: "Javascript" },
       { id: 8, value: 0, content: "XML" }
     ],
-    explanation: "Canberra is the capital and was founded in 1901"
+    explanation: "The answer is Javascript"
   },
   {
     questionId: 3,
@@ -42,7 +44,7 @@ let QuizQuestions = [
         value: 1,
         content: "An internal data store (object) of a component."
       },
-      { id: 15, value: 1, content: "Is an component" },
+      { id: 15, value: 0, content: "Is an component" },
       { id: 16, value: 0, content: "Is a child of prop" }
     ],
     explanation: "State is an internal data store (object) of a component."
@@ -51,52 +53,58 @@ let QuizQuestions = [
     questionId: 5,
     question: "Q5: What is Babel?",
     answerOptions: [
-      { id: 17, value: 1, content: "A transpiler." },
+      { id: 17, value: 0, content: "A transpiler." },
       { id: 18, value: 0, content: "An interpreter" },
       { id: 19, value: 0, content: "A Compiler" },
-      { id: 20, value: 0, content: "Both Compiler and Transpilar" }
+      { id: 20, value: 1, content: "Both Compiler and Transpilar" }
     ],
     explanation: "Babel is Both Compiler and Transpilar"
   },
   {
     questionId: 6,
-    question: "Q6: What is the capital of Australia?",
+    question:
+      "Q6: Which method in a React Component should you override to stop the component from updating?",
     answerOptions: [
-      { id: 21, value: 0, content: "Melboune" },
-      { id: 22, value: 0, content: "Sydney" },
-      { id: 23, value: 1, content: "Canberra" },
-      { id: 24, value: 0, content: "Brisbane" }
+      { id: 21, value: 0, content: "willComponentUpdate" },
+      { id: 22, value: 1, content: "shouldComponentUpdate" },
+      { id: 23, value: 0, content: "componentDidUpdate" },
+      { id: 24, value: 0, content: "componentDidMount" }
     ],
-    explanation: "Canberra is the capital and was founded in 1901"
+    explanation:
+      "Returning a boolean value with shouldComponentUpdate() helps you control the update process is the capital and was founded in 1901"
   },
   {
     questionId: 7,
-    question: "Q7: Everything in React is a ________",
+    question:
+      "Q7: Which method in a React Component is called after the component is rendered for the first time?",
     answerOptions: [
-      { id: 25, value: 1, content: "Module" },
-      { id: 26, value: 0, content: "Component" },
-      { id: 27, value: 0, content: "Package" },
-      { id: 28, value: 0, content: "Class" }
+      { id: 25, value: 0, content: "componentDidUpdate" },
+      { id: 26, value: 1, content: "componentDidMount" },
+      { id: 27, value: 0, content: "componentMounted" },
+      { id: 28, value: 0, content: "componentUpdated" }
     ],
-    explanation: "The right answer is Module"
+    explanation:
+      "The componentDidMount is called for the first time only, after it's rendered answer is Module"
   },
   {
     questionId: 8,
-    question: "Q8: What is the capital of Australia?",
+    question:
+      "Q8: Which of the following is correct syntax for a button click event handler, foo?",
     answerOptions: [
-      { id: 29, value: 0, content: "Melboune" },
-      { id: 30, value: 0, content: "Sydney" },
-      { id: 31, value: 1, content: "Canberra" },
-      { id: 32, value: 0, content: "Brisbane" }
+      { id: 29, value: 0, content: "<button onclick={this.foo()}>" },
+      { id: 30, value: 0, content: "<button onclick={this.foo}>" },
+      { id: 31, value: 1, content: "<button onClick={this.foo()}>" },
+      { id: 32, value: 0, content: "<button onClick={this.foo}>" }
     ],
-    explanation: "Canberra is the capital and was founded in 1901"
+    explanation:
+      "Note the camelCase notation in registering event handlers in React. You need to register the function and not invoke it. and was founded in 1901"
   },
   {
     questionId: 9,
     question: "Q9: Everything in React is a ________",
     answerOptions: [
-      { id: 33, value: 1, content: "Module" },
-      { id: 34, value: 0, content: "Component" },
+      { id: 33, value: 0, content: "Module" },
+      { id: 34, value: 1, content: "Component" },
       { id: 35, value: 0, content: "Package" },
       { id: 36, value: 0, content: "Class" }
     ],
