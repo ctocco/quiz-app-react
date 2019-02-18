@@ -1,7 +1,6 @@
 import React from "react";
 
 const AnswerOptions = ({ answerOptions, onAnswerSelected }) => {
-  console.log(answerOptions);
   const Answers = answerOptions.map(answerOption => {
     return (
       <ul className="list-group m-1" key={answerOption.content}>

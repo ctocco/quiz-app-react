@@ -9,17 +9,13 @@ class Home extends Component {
   };
 
   onInputChange = e => {
-    console.log(e.target.value);
-
     this.setState({ name: e.target.value });
-    console.log(this.state);
   };
 
   onSubmitLocalStorage = e => {
     e.preventDefault();
     let name = this.state.name;
     localStorage.setItem("name", name);
-    console.log(localStorage);
   };
 
   render() {

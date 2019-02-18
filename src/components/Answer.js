@@ -1,7 +1,6 @@
 import React from "react";
 
 const Answer = props => {
-  console.log(props);
   return (
     <div className="container">
       <div>

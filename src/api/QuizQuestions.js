@@ -44,7 +44,7 @@ let QuizQuestions = [
         value: 1,
         content: "An internal data store (object) of a component."
       },
-      { id: 15, value: 0, content: "Is an component" },
+      { id: 15, value: 0, content: "Is a component" },
       { id: 16, value: 0, content: "Is a child of prop" }
     ],
     explanation: "State is an internal data store (object) of a component."
@@ -108,7 +108,7 @@ let QuizQuestions = [
       { id: 35, value: 0, content: "Package" },
       { id: 36, value: 0, content: "Class" }
     ],
-    explanation: "The right answer is Module"
+    explanation: "The right answer is Component"
   },
   {
     questionId: 10,

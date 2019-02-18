@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const QuestionCount = ({ counter }) => {
   return (
-    <div>
+    <div className="col-12">
       Question<span> {counter} of </span>
       <span>10</span>
     </div>
