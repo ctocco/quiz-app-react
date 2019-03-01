@@ -2,7 +2,6 @@ import React from "react";
 import Question from "./Question";
 import QuestionCount from "./QuestionCount";
 import Answer from "./Answer";
-import Image from "./Image";
 import QuestionOptions from "./AnswerOptions";
 
 const Student = props => {

@@ -6,7 +6,7 @@ export class results extends Component {
 
     return (
       <div>
-        <h1 className="mt-5">Your results</h1>
+        <h1 className="mt-5">You scored results</h1>
       </div>
     );
   }

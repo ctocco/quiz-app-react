@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import QuizQuestions from "../api/QuizQuestions";
 
 class Teacher extends Component {
   state = {};

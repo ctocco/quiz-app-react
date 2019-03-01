@@ -5,8 +5,7 @@ import Teacher from "./components/Teacher";
 import Student from "./components/Student";
 import QuizQuestions from "./api/QuizQuestions";
 import NavigationBar from "./components/NavigationBar";
-import Results from "./components/results";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 
 class App extends Component {
@@ -38,7 +37,7 @@ class App extends Component {
     // code will run until id is less than array of questions
     this.setUserAnswer(e.currentTarget.value);
     if (this.state.questionId < QuizQuestions.length) {
-      setTimeout(() => this.setNextQuestion(), 1000);
+      setTimeout(() => this.setNextQuestion(), 3000);
     } else {
       setTimeout(() => alert("you scored" + this.state.results), 3000);
 
@@ -47,12 +46,12 @@ class App extends Component {
   };
 
   setUserAnswer = answer => {
-    let results = this.state.results + answer;
     //if answer is true or 1 then execute correct otherwise false
     if (answer) {
       const displayExplanation = true;
       this.setState({
-        results,
+        ...this.state.results,
+        results: this.state.results + 1,
         displayExplanation,
         correct: "Correct!"
       });
@@ -80,6 +79,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.results);
     return (
       <div className="App">
         <BrowserRouter>
