@@ -5,8 +5,10 @@ let QuizQuestions = [
       "Q1: How do you access a function fetch() from a h1 element in JSX?",
     answerOptions: [
       { id: 1, value: 1, content: "<h1>{fetch()}</h1>" },
+      // eslint-disable-next-line
       { id: 2, value: 0, content: "<h1>${fetch()}</h1>" },
       { id: 3, value: 0, content: "<h1>{fetch}</h1>" },
+      // eslint-disable-next-line
       { id: 4, value: 0, content: "<h1>${fetch}</h1>" }
     ],
     explanation:
