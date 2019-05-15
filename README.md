@@ -1,1 +1,1 @@
-This project is a react quiz that tests the user's knowledge on React and javascript. The next stage of functionality will allow the admin to add questions to the quiz. At the moment the quiz is only drawing from set questions.
+This project is a react quiz that tests the user's knowledge on React and javascript. There are 30 Questions to test your knowledge
