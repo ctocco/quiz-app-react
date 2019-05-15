@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Home from "./components/Home";
 import Error from "./components/Error";
-import Teacher from "./components/Teacher";
+
 import Student from "./components/Student";
 import QuizQuestions from "./api/QuizQuestions";
 import NavigationBar from "./components/NavigationBar";
@@ -87,10 +87,6 @@ class App extends Component {
             <NavigationBar />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route
-                path="/teacher"
-                render={props => <Teacher {...this.state} />}
-              />
               <Route
                 path="/student"
                 render={props => (

@@ -22,11 +22,9 @@ class Home extends Component {
     return (
       <div>
         <header className="App-header">
-          <h1 className="">
-            The ULTIMATE... most fully AWESOME Javascript and React Quiz
-          </h1>
+          <h1 className="">Javascript | React</h1>
           <img src={logo} className="App-logo" alt="logo" />
-          <h4>...you'll ever need to take</h4>
+          <h4>The ESSENTIAL Quiz</h4>
           <div className="container">
             <hr />
 

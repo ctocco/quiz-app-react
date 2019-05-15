@@ -5,7 +5,7 @@ const NavigationBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand" to="/">
-        QUIZ-APP
+        Claudio Tocco
       </NavLink>
       <button
         className="navbar-toggler"
@@ -23,11 +23,6 @@ const NavigationBar = () => {
           <li className="nav-item">
             <NavLink className="nav-link" to="/">
               Home <span className="sr-only">(current)</span>
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="teacher">
-              Admin
             </NavLink>
           </li>
           <li className="nav-item">
