@@ -8,6 +8,7 @@
       "config": { "distDir": "build" }
     }
   ],
+  "regions": ["all"],
   "routes": [
     {
       "src": "/static/(.*)",
