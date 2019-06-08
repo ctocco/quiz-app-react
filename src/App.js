@@ -39,7 +39,7 @@ class App extends Component {
     if (this.state.questionId < QuizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 3000);
     } else {
-      setTimeout(() => alert("you scored" + this.state.results), 3000);
+      setTimeout(() => alert(`You scored ${this.state.results} out of 10!` ), 3000);
 
       setTimeout(() => window.location.reload(), 6000);
     }
